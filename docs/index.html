@@ -36,14 +36,11 @@
                 <!-- Button to navigate to the special message page -->
                 <a href="special-message.html" class="btn btn-outline-light btn-lg mx-2">Click to Reveal a Special Message</a>
             </div>
-            
 
-            <!-- SoundCloud Embed (Hidden initially) -->
-            <div class="soundcloud-embed" style="display:none;">
-                <iframe id="soundcloud-player" style="display:none;" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/happy-birthday-official/sets/happy-birthday-to-382966684&color=%2300aabb&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false">
-                </iframe>
-            </div>
+            <!-- SoundCloud Embed (Initially hidden) -->
+            <iframe id="soundcloud-player" style="display:none;" width="0" height="0" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/happy-birthday-official/sets/happy-birthday-to-382966684&color=%2300aabb&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+            </iframe>
         </section>
     </main>
 
@@ -51,7 +48,13 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('play-song').addEventListener('click', function () {
+            var iframe = document.getElementById('soundcloud-player');
+            // iframe.style.display = 'block'; // Show the iframe
+            iframe.src += "&auto_play=true"; // Start the music
+        });
+    </script>
 </body>
 
 </html>
