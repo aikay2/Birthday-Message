@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Message</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #1e3c72, #2a5298); /* Dark blue to purple gradient */
+        }
+    </style>
+</head>
+
+<body class="font-poppins">
+    <!-- Modal for Audio Permission -->
+    <div class="modal fade" id="audioPermissionModal" tabindex="-1" role="dialog" aria-labelledby="audioPermissionModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="audioPermissionModalLabel">Play Audio</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="cancel-audio">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>To enjoy the special message, please allow the audio to play.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="cancel-audio">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="allow-audio">Allow Audio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container d-flex flex-column align-items-center justify-content-center min-vh-100" id="content" style="display: none;">
+        <section class="birthday-card shadow-lg rounded p-4 text-center bg-dark text-light">
+            <header>
+                <h1 class="display-4 card-title">A Special Message for You</h1>
+            </header>
+            <p class="lead mt-4">
+                Dr. Aguigwo Gerald, <br>
+                Thank you so much for being the absolute best💕. I appreciate our friendship more than you even realize. I don't know what to say that I've not said before, guyyyy. I just want you to know that I'll always be here for you anytime you need me.
+                <br><br>
+                Happy birthday, <br> <span class="highlighted-name">Dr. Gerald Somtochukwu Norbert BomBomBom Aguigwo</span>. <br>
+                I love youu!!!💕
+            </p>
+            <a href="index.html" class="btn btn-outline-light btn-lg mt-4">Back to Main Page</a>
+        </section>
+
+        <!-- SoundCloud Audio Embed -->
+        <iframe id="soundcloud-player" width="0" height="0" scrolling="no" frameborder="no" allow="autoplay" 
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1321613338&color=%23ff5500&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=false">
+        </iframe>
+    </main>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // Show the modal when the page loads
+            $('#audioPermissionModal').modal('show');
+
+            // Allow audio button click event
+            $('#allow-audio').on('click', function() {
+                // Hide the modal
+                $('#audioPermissionModal').modal('hide');
+                // Show the page content
+                $('#content').show();
+                // Play the audio
+                var iframe = document.getElementById('soundcloud-player');
+                iframe.src += "&auto_play=true"; // Start playing the audio
+            });
+
+            // Cancel button click event
+            $('#cancel-audio').on('click', function() {
+                // Redirect to index.html
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+
+</html>

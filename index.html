@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-br from-darkblue to-purple text-white font-poppins">
+    <main class="container-fluid d-flex flex-column align-items-center justify-content-center min-vh-100">
+        <section class="birthday-card shadow-lg rounded p-4 text-center bg-dark text-light">
+            <header>
+                <h1 class="display-4 card-title">Happy Birthday, Obsessed💕🥺!</h1>
+            </header>
+            <p class="lead card-subtitle mb-2 mt-3">May your day be filled with love, joy, and laughter!</p>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Birthday Cake" class="img-fluid my-3 rounded">
+                <figcaption class="card-text mb-4">Another year, another adventure. Let's make it unforgettable!</figcaption>
+            </figure>
+            <div class="d-flex justify-content-around mb-4">
+                <!-- Button to play the song -->
+                <button class="btn btn-outline-light btn-lg mx-2" id="play-song">Play Your Birthday Song</button>
+                <!-- Button to navigate to the special message page -->
+                <a href="special-message.html" class="btn btn-outline-light btn-lg mx-2">Click to Reveal a Special Message</a>
+            </div>
+            
+
+            <!-- SoundCloud Embed (Hidden initially) -->
+            <div class="soundcloud-embed" style="display:none;">
+                <iframe id="soundcloud-player" style="display:none;" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/happy-birthday-official/sets/happy-birthday-to-382966684&color=%2300aabb&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

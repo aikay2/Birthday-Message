@@ -1,0 +1,104 @@
+/* General body styling */
+body {
+    background: url('https://source.unsplash.com/1600x900/?night,stars') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    color: white;
+}
+
+/* Birthday card styling */
+.birthday-card {
+    background: linear-gradient(135deg, rgba(30, 30, 60, 0.9), rgba(10, 10, 40, 0.9));
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 500px; /* Maintain width for better visibility */
+    width: 100%;
+    margin: 1rem auto; /* Center card with margin */
+}
+
+/* Text styling */
+.card-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    color: #ffdd57; /* Soft gold color */
+}
+
+.card-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #d3d3d3; /* Light grey color */
+}
+
+.card-text {
+    font-family: 'Poppins', sans-serif;
+    color: #ffdfba; /* Soft peach color */
+    font-size: 1.2rem;
+}
+
+/* Button styling */
+#play-song {
+    border: 2px solid #fff;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#play-song:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Message styling */
+#message {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.4rem;
+    color: #ffdfba; /* Soft peach color */
+    margin-top: 1rem;
+}
+
+/* Image styling */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 2rem;
+    }
+
+    .birthday-card {
+        padding: 1.5rem;
+    }
+
+    #play-song {
+        padding: 0.5rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-title {
+        font-size: 1.8rem;
+    }
+
+    .birthday-card {
+        padding: 1rem;
+    }
+
+    #play-song {
+        padding: 0.5rem 1.5rem;
+    }
+}
+
+
+.highlighted-name {
+    font-family: 'Courier New', Courier, monospace; 
+    color: #ffdfba; 
+    font-weight: bold;
+    font-size: 1.1em;
+}
