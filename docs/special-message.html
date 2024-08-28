@@ -55,9 +55,13 @@
         </section>
 
         <!-- SoundCloud Audio Embed (Invisible) -->
-        <iframe id="soundcloud-player" width="0" height="0" scrolling="no" frameborder="no" allow="autoplay" 
+        <!-- <iframe id="soundcloud-player" width="0" height="0" scrolling="no" frameborder="no" allow="autoplay" 
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1321613338&color=%23ff5500&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=false">
-        </iframe>
+        </iframe> -->
+        <audio id="birthday-audio" style="display:none;">
+            <source src="assets/the-way-home-6674.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </main>
 
     <!-- Bootstrap JS and jQuery -->
@@ -77,8 +81,10 @@
                 // Show the page content
                 $('#content').show();
                 // Play the audio
-                var iframe = document.getElementById('soundcloud-player');
-                iframe.src += "&auto_play=true"; // Start playing the audio
+                // var iframe = document.getElementById('soundcloud-player');
+                // iframe.src += "&auto_play=true"; // Start playing the audio
+                var audio = document.getElementById('birthday-audio');
+                audio.play();
             });
 
             // Cancel button click event

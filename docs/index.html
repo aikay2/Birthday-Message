@@ -38,9 +38,13 @@
             </div>
 
             <!-- SoundCloud Embed (Initially hidden) -->
-            <iframe id="soundcloud-player" style="display:none;" width="0" height="0" scrolling="no" frameborder="no" allow="autoplay"
+            <!-- <iframe id="soundcloud-player" style="display:none;" width="0" height="0" scrolling="no" frameborder="no" allow="autoplay"
                 src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/happy-birthday-official/sets/happy-birthday-to-382966684&color=%2300aabb&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-            </iframe>
+            </iframe> -->
+            <audio id="birthday-audio" style="display:none;">
+                <source src="assets/happy-birthday-on-piano-121400.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
         </section>
     </main>
 
@@ -50,9 +54,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         document.getElementById('play-song').addEventListener('click', function () {
-            var iframe = document.getElementById('soundcloud-player');
+            var audio = document.getElementById('birthday-audio');
             // iframe.style.display = 'block'; // Show the iframe
-            iframe.src += "&auto_play=true"; // Start the music
+            audio.play();
         });
     </script>
 </body>
